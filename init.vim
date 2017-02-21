@@ -161,15 +161,15 @@ if has("autocmd")
 else
 endif " has("autocmd")
 
+"======================== Syntax settings ===================
 
 syntax enable
-if has('gui_running')
-  set transparency=3
-  " fix js regex syntax
-  set regexpengine=1
-  syntax enable
-endif
+set regexpengine=1
+syntax enable
 set background=dark
+au BufRead,BufNewFile *.py set filetype=python syntax=python
+"======================== Syntax settings end ===============
+
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 " let g:hybrid_use_Xresources = 1
@@ -395,6 +395,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 
 let g:ctrlp_buftag_types = {'go' : '--language-force=go --golang-types=ftv'}
+let g:ctrlp_custom_ignore = {"dir": "\.git$\|\.hg$\|\ve$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$", "file": "\.exe$\|\.so$\|\.dat$|\.swp$"}
 
 func! MyCtrlPTag()
   let g:ctrlp_prompt_mappings = {
@@ -536,5 +537,18 @@ let g:airline_right_sep='|'
 " vim:ts=2:sw=2:et
 
 " =================== javscript-syntax  ==================
-"
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+
+" =================== YCM settings  ==================
+let g:ycm_auto_trigger = 0
+
+" =================== tagbar settings  ===============
+nnoremap <F8> :TagbarToggle<CR>
+nnoremap <F7> :TagbarOpen fj<CR>
+
+" =================== syntastic settings  ===============
+let g:syntastic_auto_loc_list=1
+nnoremap <leader>x :SyntasticCheck<CR>
+let g:syntastic_python_checkers = ["pylint"]
+let g:syntastic_javascript_checkers = ["jshint"]
+let g:syntastic_sh_checkers = ["shellcheck"]

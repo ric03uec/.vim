@@ -83,11 +83,14 @@
   path = bundle/vim-javascript-syntax
   url = https://github.com/jelera/vim-javascript-syntax.git
 [submodule "bundle/syntastic"]
-  path = bundle/vim-syntastic
-  url = https://github.com/vim-syntastic/syntastic.git
+	path = bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe
 [submodule "bundle/nerdtree-tabs"]
 	path = bundle/nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
