@@ -536,9 +536,6 @@ let g:airline_right_sep='|'
 
 " vim:ts=2:sw=2:et
 
-" =================== javscript-syntax  ==================
-au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-
 " =================== YCM settings  ==================
 let g:ycm_auto_trigger = 0
 
@@ -547,8 +544,14 @@ nnoremap <F8> :TagbarToggle<CR>
 nnoremap <F7> :TagbarOpen fj<CR>
 
 " =================== syntastic settings  ===============
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+
 let g:syntastic_auto_loc_list=1
 nnoremap <leader>x :SyntasticCheck<CR>
 let g:syntastic_python_checkers = ["pylint"]
 let g:syntastic_javascript_checkers = ["jshint"]
 let g:syntastic_sh_checkers = ["shellcheck"]
+let g:syntastic_mode_map = { 'mode': 'passive' }
+
+" =================== supertab settings  ===============
+"let g:SuperTabDefaultCompletionType = '<C-n>'
