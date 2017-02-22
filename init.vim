@@ -72,8 +72,10 @@ set smarttab
 
 set et
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 set expandtab
+set smarttab
 
 set nrformats-=octal
 set shiftround
@@ -339,15 +341,12 @@ autocmd BufNewFile,BufReadPost *.scala setl shiftwidth=2 expandtab
 " Markdown Settings
 autocmd BufNewFile,BufReadPost *.md setl ts=4 sw=4 sts=4 expandtab
 
-" lua settings
-autocmd BufNewFile,BufRead *.lua setlocal noet ts=4 sw=4 sts=4
-
 " Dockerfile settings
 autocmd FileType dockerfile set noexpandtab
 
 " shell/config/systemd settings
 autocmd FileType fstab,systemd set noexpandtab
-autocmd FileType gitconfig,sh,toml set noexpandtab
+autocmd FileType gitconfig,toml set noexpandtab
 
 " python indent
 autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 smarttab expandtab
