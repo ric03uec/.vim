@@ -521,13 +521,15 @@ imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
 autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.8.py
 
 " =================== vim-airline ========================
-let g:airline_theme='simple'
-" set to use powerline fonts when not in a ssh session
+" let g:airline_theme='serene'
+let g:airline_theme='base16color'
 let g:airline_powerline_fonts=1
-let g:airline_left_sep='|'
-let g:airline_right_sep='|'
-
-" vim:ts=2:sw=2:et
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_extensions=['branch', 'tabline']
+let g:airline_symbols = get(g:,'airline_symbols',{})
+let g:airline_symbols.linenr='LN'
+let g:airline_symbols.maxlinenr=''
 
 " =================== YCM settings  ==================
 let g:ycm_auto_trigger = 0
