@@ -20,14 +20,16 @@ Currently using version 2.2 of Pathogen
 
 ## Plugins Used
 
-* [Dockerfile](https://github.com/docker/docker/tree/master/contrib/syntax/vim)
+* [github.com/Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 * [github.com/ctrlpvim/ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim.git)
 * [github.com/Raimondi/delimitMate](https://github.com/Raimondi/delimitMate.git)
-* [github.com/zchee/deoplete-go](https://github.com/zchee/deoplete-go.git)
-* [github.com/Shougo/deoplete.nvim](https://github.com/Shougo/deoplete.nvim.git)
 * [github.com/vivien/vim-linux-coding-style](https://github.com/vivien/vim-linux-coding-style.git)
 * [github.com/scrooloose/nerdtree](https://github.com/scrooloose/nerdtree.git)
+* [github.com/jistr/vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
+* [github.com/ervandew/supertab](https://github.com/ervandew/supertab)
+* [github.com/vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic)
 * [github.com/godlygeek/tabular](https://github.com/godlygeek/tabular.git)
+* [github.com/majutsushi/tagbar](https://github.com/majutsushi/tagbar)
 * [github.com/vim-airline/vim-airline](https://github.com/vim-airline/vim-airline.git)
 * [github.com/vim-airline/vim-airline-themes](https://github.com/vim-airline/vim-airline-themes.git)
 * [github.com/moll/vim-bbye](https://github.com/moll/vim-bbye.git)
@@ -41,6 +43,7 @@ Currently using version 2.2 of Pathogen
 * [github.com/fatih/vim-go](https://github.com/fatih/vim-go.git)
 * [github.com/fatih/vim-hclfmt](https://github.com/fatih/vim-hclfmt.git)
 * [github.com/Yggdroot/indentLine](https://github.com/Yggdroot/indentLine.git)
+* [github.com/jelera/vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
 * [github.com/elzr/vim-json](https://github.com/elzr/vim-json.git)
 * [github.com/moorereason/vim-markdownfmt](https://github.com/moorereason/vim-markdownfmt.git)
 * [github.com/terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors.git)
