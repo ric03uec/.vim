@@ -168,7 +168,6 @@ endif " has("autocmd")
 syntax enable
 set regexpengine=1
 syntax enable
-set background=dark
 au BufRead,BufNewFile *.py set filetype=python syntax=python
 "======================== Syntax settings end ===============
 
@@ -176,6 +175,8 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
+set t_co=256
+set background=dark
 colorscheme solarized
 set guifont=Inconsolata:h15
 set guioptions-=L
@@ -370,6 +371,8 @@ set wildignore+=go/bin                       " Go bin files
 set wildignore+=go/bin-vagrant               " Go bin-vagrant files
 set wildignore+=*.pyc                            " Python byte code
 set wildignore+=*.orig                           " Merge resolution files
+set wildignore+=*ve/*                           " Python virtual env
+set wildignore+=*node_modules/*					" Node modules
 
 
 " ----------------------------------------- "
@@ -388,7 +391,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 
 let g:ctrlp_buftag_types = {'go' : '--language-force=go --golang-types=ftv'}
-let g:ctrlp_custom_ignore = {"dir": "\.git$\|\.hg$\|\ve$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$", "file": "\.exe$\|\.so$\|\.dat$|\.swp$"}
+let g:ctrlp_custom_ignore = {"dir": "\.git$\|\.hg$\|\ve$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$", "file": "\.exe$\|\.so$\|\.dat$|\.swp"}
 
 func! MyCtrlPTag()
   let g:ctrlp_prompt_mappings = {
