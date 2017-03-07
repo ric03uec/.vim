@@ -517,12 +517,6 @@ endfunction
 let blacklist = ['markdown', 'md']
 autocmd BufWritePre * StripWhitespace
 
-" ================= clang-frmat ==================
-
-map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
-imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
-autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.8.py
-
 " =================== vim-airline ========================
 " let g:airline_theme='serene'
 let g:airline_theme='base16color'
