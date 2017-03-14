@@ -490,27 +490,6 @@ let g:vim_json_syntax_conceal = 0
 " ==================== vim-mardownfmt ====================
 "let g:markdownfmt_autosave = 1
 
-" ==================== vim-multiple-cursors ====================
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-i>'
-let g:multi_cursor_prev_key='<C-y>'
-let g:multi_cursor_skip_key='<C-b>'
-let g:multi_cursor_quit_key='<Esc>'
-
-" Called once right before you start selecting multiple cursors
-function! Multiple_cursors_before()
-  if exists(':NeoCompleteLock')==2
-    exe 'NeoCompleteLock'
-  endif
-endfunction
-
-" Called once only when the multiple selection is canceled (default <Esc>)
-function! Multiple_cursors_after()
-  if exists(':NeoCompleteUnlock')==2
-    exe 'NeoCompleteUnlock'
-  endif
-endfunction
-
 " ========= vim-better-whitespace ==================
 
 " auto strip whitespace except for file with extention blacklisted
@@ -530,6 +509,9 @@ let g:airline_symbols.maxlinenr=''
 
 " =================== YCM settings  ==================
 let g:ycm_auto_trigger = 0
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 " =================== tagbar settings  ===============
 nnoremap <F8> :TagbarToggle<CR>
@@ -546,4 +528,11 @@ let g:syntastic_sh_checkers = ["shellcheck"]
 let g:syntastic_mode_map = { 'mode': 'passive' }
 
 " =================== supertab settings  ===============
-"let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" =================== Ultisnips settings ==============
+"let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsExpandTrigger = "<cr>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
