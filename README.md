@@ -25,6 +25,7 @@ Currently using version 2.2 of Pathogen
 * [github.com/Raimondi/delimitMate](https://github.com/Raimondi/delimitMate.git)
 * [github.com/vivien/vim-linux-coding-style](https://github.com/vivien/vim-linux-coding-style.git)
 * [github.com/scrooloose/nerdtree](https://github.com/scrooloose/nerdtree.git)
+
 * [github.com/jistr/vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
 * [github.com/ervandew/supertab](https://github.com/ervandew/supertab)
 * [github.com/vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic)

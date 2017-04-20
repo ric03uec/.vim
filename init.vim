@@ -319,7 +319,7 @@ endif
 
 au BufNewFile,BufRead *.vim setlocal noet ts=4 sw=4 sts=4
 au BufNewFile,BufRead *.txt setlocal noet ts=4 sw=4
-au BufNewFile,BufRead *.md setlocal spell noet ts=4 sw=4
+au BufNewFile,BufRead *.md setlocal spell noet ts=4 sts=4
 au BufNewFile,BufRead *.yml,*.yaml setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.cpp setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.hpp setlocal expandtab ts=2 sw=2
@@ -338,6 +338,9 @@ au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
 " Dockerfile settings
 autocmd FileType dockerfile set noexpandtab
+
+" Markdown Settings
+autocmd BufNewFile,BufReadPost *.md setl ts=4 sw=4 sts=4 expandtab
 
 " shell/config/systemd settings
 autocmd FileType fstab,systemd set noexpandtab
@@ -497,15 +500,21 @@ let blacklist = ['markdown', 'md']
 autocmd BufWritePre * StripWhitespace
 
 " =================== vim-airline ========================
-" let g:airline_theme='serene'
-let g:airline_theme='base16color'
+let g:airline_theme='jellybeans'
+"let g:airline_theme='powerlineish'
+"let g:airline_theme='base16color'
+
 let g:airline_powerline_fonts=1
-let g:airline_left_sep=''
+"let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_extensions=['branch', 'tabline']
 let g:airline_symbols = get(g:,'airline_symbols',{})
 let g:airline_symbols.linenr='LN'
 let g:airline_symbols.maxlinenr=''
+
+" show file path
+let g:airline_section_c='%F'
+
 
 " =================== YCM settings  ==================
 let g:ycm_auto_trigger = 0
@@ -532,7 +541,6 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " =================== Ultisnips settings ==============
 "let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsExpandTrigger = "<cr>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
