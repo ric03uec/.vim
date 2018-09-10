@@ -1,13 +1,13 @@
 .vim
 ====
 
-My vim dot files. the `.vimrc` file is saved to [vimrc](https://github.com/jessfraz/.vim/blob/master/vimrc).
+My nvim dot files. the `init.vim` file is saved to [vimrc](https://github.com/ric03uec/.vim/blob/master/init.vim).
 
 Just run the following commands via terminal to get perfectly set up:
 
 ```console
 $ cd ~/
-$ git clone --recursive https://github.com/jessfraz/.vim.git .vim
+$ git clone --recursive https://github.com/ric03uec/.vim.git .vim
 $ ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 $ cd $HOME/.vim
 $ git submodule update --init
@@ -16,7 +16,7 @@ $ git submodule update --init
 ## Pathogen
 The vim dot files make use of the excellent [Pathogen](https://github.com/tpope/vim-pathogen) runtime path manager to install plugins and runtime files into their own private directiories.
 
-Currently using version 2.2 of Pathogen
+Currently using version 2.4 of Pathogen
 
 ## Plugins Used
 
