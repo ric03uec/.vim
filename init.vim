@@ -480,7 +480,8 @@ nmap <C-n> :NERDTreeToggle<CR>
 noremap <Leader>n :NERDTreeToggle<cr>
 noremap <Leader>f :NERDTreeFind<cr>
 
-let NERDTreeShowHidden=1
+let g:NERDTreeChDirMode = 2
+let g:NERDTreeShowHidden = 1
 
 let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '.DS_Store', '\.pyc$', '\.swp', '\.swo']
 
