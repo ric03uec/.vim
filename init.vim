@@ -493,6 +493,7 @@ let g:vim_json_syntax_conceal = 0
 
 " ==================== vim-mardownfmt ====================
 "let g:markdownfmt_autosave = 1
+let g:conceallevel = 0
 
 " ========= vim-better-whitespace ==================
 
