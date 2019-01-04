@@ -55,9 +55,6 @@
 [submodule "bundle/vim-python-pep8-indent"]
 	path = bundle/vim-python-pep8-indent
 	url = https://github.com/hynek/vim-python-pep8-indent.git
-[submodule "bundle/vim-markdownfmt"]
-	path = bundle/vim-markdownfmt
-	url = https://github.com/moorereason/vim-markdownfmt.git
 [submodule "bundle/vim-buftabline"]
 	path = bundle/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
@@ -115,3 +112,6 @@
 [submodule "bundle/nginx.vim"]
 	path = bundle/nginx.vim
 	url = https://github.com/chr4/nginx.vim
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown

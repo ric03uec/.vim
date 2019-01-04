@@ -488,12 +488,15 @@ let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '.DS_Store', '\.pyc$', '\.swp', '
 " Close nerdtree and vim on close file
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" Start nerdtree when a file is opened
+" autocmd vimenter * NERDTree
+
 " ==================== vim-json ====================
 let g:vim_json_syntax_conceal = 0
 
-" ==================== vim-mardownfmt ====================
-"let g:markdownfmt_autosave = 1
-let g:conceallevel = 0
+" ==================== vim-mardown ====================
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_folding_disabled = 1
 
 " ========= vim-better-whitespace ==================
 
