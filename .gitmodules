@@ -76,9 +76,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
 [submodule "bundle/nerdtree-tabs"]
 	path = bundle/nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs
@@ -121,3 +118,9 @@
 [submodule "bundle/vim-deoplete"]
 	path = bundle/vim-deoplete
 	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "bundle/vim-gocode"]
+	path = bundle/vim-gocode
+	url = https://github.com/mdempsky/gocode
+[submodule "bundle/deoplete-go"]
+	path = bundle/deoplete-go
+	url = https://github.com/zchee/deoplete-go

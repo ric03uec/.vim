@@ -522,7 +522,15 @@ let g:airline_section_c='%F'
 
 " =================== Deoplete settings  =============
 let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option({
+	\ 'camel_case': v:true,
+	\ 'min_pattern_length': 3,
+	\ 'max_list': 20,
+\ })
 
+call deoplete#custom#source('_',
+	\ 'disabled_syntaxes',
+	\ ['Comment', 'String'])
 " =================== YCM settings  ==================
 " let g:ycm_auto_trigger = 0
 " " make YCM compatible with UltiSnips (using supertab)
