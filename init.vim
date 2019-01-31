@@ -520,12 +520,14 @@ let g:airline_symbols.maxlinenr=''
 " show file path
 let g:airline_section_c='%F'
 
+" =================== Deoplete settings  =============
+let g:deoplete#enable_at_startup = 1
 
 " =================== YCM settings  ==================
-let g:ycm_auto_trigger = 0
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:ycm_auto_trigger = 0
+" " make YCM compatible with UltiSnips (using supertab)
+" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 " =================== tagbar settings  ===============
 nnoremap <F8> :TagbarToggle<CR>
