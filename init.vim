@@ -482,6 +482,7 @@ noremap <Leader>f :NERDTreeFind<cr>
 
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeDirArrows = 1
 
 let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '.DS_Store', '\.pyc$', '\.swp', '\.swo']
 
@@ -531,6 +532,7 @@ call deoplete#custom#option({
 call deoplete#custom#source('_',
 	\ 'disabled_syntaxes',
 	\ ['Comment', 'String'])
+
 " =================== YCM settings  ==================
 " let g:ycm_auto_trigger = 0
 " " make YCM compatible with UltiSnips (using supertab)
@@ -573,7 +575,7 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 let g:syntastic_auto_loc_list=1
 nnoremap <leader>x :SyntasticCheck<CR>
 let g:syntastic_python_checkers = ["pylint"]
-let g:syntastic_javascript_checkers = ["eslint"]
+let g:syntastic_javascript_checkers = ["jshint"]
 let g:syntastic_sh_checkers = ["shellcheck"]
 let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
