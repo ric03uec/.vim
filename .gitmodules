@@ -37,9 +37,6 @@
 [submodule "bundle/ctrlp.vim"]
 	path = bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "bundle/vim-nginx"]
-	path = bundle/vim-nginx
-	url = https://github.com/fatih/vim-nginx.git
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
@@ -100,15 +97,9 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "vim-surround"]
+[submodule "bundle/vim-surround"]
 	path = vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/nginx.vim"]
-	path = bundle/nginx.vim
-	url = https://github.com/chr4/nginx.vim
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown
@@ -127,3 +118,6 @@
 [submodule "bundle/nerdtree-git-plugin"]
 	path = bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "bundle/vim-orgmode"]
+	path = vim-orgmode
+	url = https://github.com/jceb/vim-orgmode.git

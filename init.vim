@@ -355,6 +355,9 @@ au BufRead,BufNewFile MAINTAINERS set ft=toml
 " spell check for git commits
 autocmd FileType gitcommit setlocal spell
 
+" spell check for markdown
+autocmd BufRead,BufNewFile *.md setlocal spell
+
 " Wildmenu completion {{{
 set wildmenu
 " set wildmode=list:longest
@@ -394,7 +397,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 
 let g:ctrlp_buftag_types = {'go' : '--language-force=go --golang-types=ftv'}
-let g:ctrlp_custom_ignore = {"dir": "\.git$\|\.hg$\|\ve$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$", "file": "\.exe$\|\.so$\|\.dat$|\.swp"}
+let g:ctrlp_custom_ignore = {"dir": "\.git$\|\.hg$\|\ve$\|\.svn$\|\.yardoc\|\.dist$\|public\/images\|public\/system\|data\|log\|tmp$", "file": "\.exe$\|\.so$\|\.dat$|\.swp"}
 
 func! MyCtrlPTag()
   let g:ctrlp_prompt_mappings = {
@@ -523,6 +526,10 @@ let g:airline_section_c='%F'
 
 " =================== Deoplete settings  =============
 let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('ignore_sources', {
+	\ '_': ['around', 'buffer']
+\})
+
 call deoplete#custom#option({
 	\ 'camel_case': v:true,
 	\ 'min_pattern_length': 3,
@@ -575,7 +582,7 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 let g:syntastic_auto_loc_list=1
 nnoremap <leader>x :SyntasticCheck<CR>
 let g:syntastic_python_checkers = ["pylint"]
-let g:syntastic_javascript_checkers = ["jshint"]
+let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_sh_checkers = ["shellcheck"]
 let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
