@@ -121,3 +121,7 @@
 [submodule "bundle/vim-orgmode"]
 	path = vim-orgmode
 	url = https://github.com/jceb/vim-orgmode.git
+[submodule "bundle/coc.nvim"]
+	path = bundle/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+	branch = release

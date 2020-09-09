@@ -264,9 +264,6 @@ imap jk <ESC>l
 
 nnoremap <F6> :setlocal spell! spell?<CR>
 
-" Select search pattern howewever do not jump to the next one
-nnoremap <leader>c :TComment<CR>
-
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
 nnoremap n nzzzv
@@ -440,7 +437,6 @@ let g:go_highlight_extra_types = 0
 let g:go_highlight_operators = 0
 let g:go_highlight_build_constraints = 1
 
-
 au FileType go nmap <Leader>s <Plug>(go-def-split)
 au FileType go nmap <Leader>v <Plug>(go-def-vertical)
 au FileType go nmap <Leader>i <Plug>(go-info)
@@ -525,21 +521,21 @@ let g:airline_symbols.maxlinenr=''
 let g:airline_section_c='%F'
 
 " =================== Deoplete settings  =============
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('ignore_sources', {
-	\ '_': ['around', 'buffer']
-\})
-
-call deoplete#custom#option({
-	\ 'camel_case': v:true,
-	\ 'min_pattern_length': 3,
-	\ 'max_list': 20,
-\ })
-
-call deoplete#custom#source('_',
-	\ 'disabled_syntaxes',
-	\ ['Comment', 'String'])
-
+" let g:deoplete#enable_at_startup = 1
+" call deoplete#custom#option('ignore_sources', {
+" 	\ '_': ['around', 'buffer']
+" \})
+"
+" call deoplete#custom#option({
+" 	\ 'camel_case': v:true,
+" 	\ 'min_pattern_length': 3,
+" 	\ 'max_list': 20,
+" \ })
+"
+" call deoplete#custom#source('_',
+" 	\ 'disabled_syntaxes',
+" 	\ ['Comment', 'String'])
+"
 " =================== YCM settings  ==================
 " let g:ycm_auto_trigger = 0
 " " make YCM compatible with UltiSnips (using supertab)
@@ -627,3 +623,7 @@ let g:NERDCommentEmptyLines = 1
 
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+
+" VIM ORG-Mode
+packloadall
+silent! helptags ALL
