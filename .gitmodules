@@ -122,3 +122,9 @@
 	path = bundle/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
 	branch = release
+[submodule "bundle/Jenkinsfile-vim-syntax"]
+	path = bundle/Jenkinsfile-vim-syntax
+	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = https://github.com/python-mode/python-mode.git

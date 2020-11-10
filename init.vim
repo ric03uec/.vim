@@ -394,7 +394,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 
 let g:ctrlp_buftag_types = {'go' : '--language-force=go --golang-types=ftv'}
-let g:ctrlp_custom_ignore = {"dir": "\.git$\|\.hg$\|\ve$\|\.svn$\|\.yardoc\|\.dist$\|public\/images\|public\/system\|data\|log\|tmp$", "file": "\.exe$\|\.so$\|\.dat$|\.swp"}
+let g:ctrlp_custom_ignore = {"dir": "\.git$\|\.hg$\|\ve$\|\.svn$\|\.yardoc\|\.dist$\|public\/images\|public\/system\|data\|log\|tmp$", "file": "\.exe$\|\.so$\|\.dat$\|\.swp\|static"}
 
 func! MyCtrlPTag()
   let g:ctrlp_prompt_mappings = {
@@ -495,9 +495,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " ==================== vim-json ====================
 let g:vim_json_syntax_conceal = 0
 
-" ==================== vim-mardown ====================
+" ==================== vim-markdown ====================
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
+let g:conceallevel = 0
 
 " ========= vim-better-whitespace ==================
 
@@ -601,7 +602,6 @@ augroup END
 "let g:UltiSnipsExpandTrigger = "<tab>"
 "let g:UltiSnipsJumpForwardTrigger = "<tab>"
 "let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
 
 " =================== Nerdcommenter settings ==============
 " Add spaces after comment delimiters by default
