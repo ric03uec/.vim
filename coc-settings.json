@@ -2,12 +2,37 @@
   "languageserver": {
     "go": {
       "command": "gopls",
-      "rootPatterns": ["go.mod"],
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "trace.server": "verbose",
       "filetypes": ["go"]
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "filetypes": ["sh"],
+      "args": ["start"],
+      "ignoredRootPaths": ["~"]
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"],
+      "initializationOptions": {},
+      "settings": {}
+    },
+    "terraform": {
+      "command": "terraform-ls",
+			"args": ["serve"],
+			"filetypes": [
+				"terraform",
+				"tf"
+			],
+			"initializationOptions": {},
+			"settings": {}
     }
   },
-  "python.jediEnabled": false,
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": false
+  "python.pythonPath": "python3",
+  "python.linting.enabled": false,
+  "python.linting.pylintEnabled": false,
+  "python.linting.pylintArgs": "--rc-file=.pylintrc",
+  "python.jediEnabled": true
 }

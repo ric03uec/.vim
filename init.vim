@@ -332,6 +332,8 @@ au FileType nginx setlocal noet ts=4 sw=4 sts=4
 " Go settings
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 " autocmd BufEnter *.go colorscheme nofrils-dark
+"
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 " Dockerfile settings
 autocmd FileType dockerfile set noexpandtab
@@ -376,6 +378,7 @@ set wildignore+=*.pyc                            " Python byte code
 set wildignore+=*.orig                           " Merge resolution files
 set wildignore+=*ve/*                           " Python virtual env
 set wildignore+=*node_modules/*					" Node modules
+set wildignore+=*static*						" Static files
 
 
 " ----------------------------------------- "
@@ -394,7 +397,8 @@ let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 
 let g:ctrlp_buftag_types = {'go' : '--language-force=go --golang-types=ftv'}
-let g:ctrlp_custom_ignore = {"dir": "\.git$\|\.hg$\|\ve$\|\.svn$\|\.yardoc\|\.dist$\|public\/images\|public\/system\|data\|log\|tmp$", "file": "\.exe$\|\.so$\|\.dat$\|\.swp\|static"}
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/ve/*,*/venv/*
+let g:ctrlp_custom_ignore = {"dir": "\.git$\|\.hg$\|\ve$\|\venv$\|\VENV$\|\.svn$\|\.yardoc\|\.dist$\|public\/images\|public\/system\|data\|log\|tmp$", "file": "\.exe$\|\.so$\|\.dat$\|\.swp\|static$"}
 
 func! MyCtrlPTag()
   let g:ctrlp_prompt_mappings = {
@@ -489,6 +493,7 @@ let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '.DS_Store', '\.pyc$', '\.swp', '
 " Close nerdtree and vim on close file
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" more configs: https://gist.github.com/avesus/1954d9384d86cc1e39cb2b2eff7017b7
 " Start nerdtree when a file is opened
 " autocmd vimenter * NERDTree
 
@@ -543,6 +548,8 @@ let g:airline_section_c='%F'
 " " make YCM compatible with UltiSnips (using supertab)
 " let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 " let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"
+autocmd FileType python let b:coc_suggest_disable = 1
 
 " =================== tagbar settings  ===============
 nnoremap <F8> :TagbarToggle<CR>
@@ -625,6 +632,8 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
+
 " VIM ORG-Mode
 packloadall
 silent! helptags ALL
+
