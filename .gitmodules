@@ -134,3 +134,6 @@
 [submodule "bundle/vim-jsx-typescript"]
 	path = bundle/vim-jsx-typescript
 	url = https://github.com/peitalin/vim-jsx-typescript
+[submodule "bundle/vim-haproxy"]
+	path = bundle/vim-haproxy
+	url = https://github.com/Joorem/vim-haproxy
