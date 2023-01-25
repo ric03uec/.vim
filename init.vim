@@ -331,8 +331,12 @@ au FileType nginx setlocal noet ts=4 sw=4 sts=4
 
 " Go settings
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
+autocmd FileType go set list lcs=tab:\┊\ "last char is space
+autocmd FileType go hi SpecialKey ctermfg=gray
 " autocmd BufEnter *.go colorscheme nofrils-dark
 "
+"
+
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 " Dockerfile settings
@@ -503,7 +507,7 @@ let g:vim_json_syntax_conceal = 0
 " ==================== vim-markdown ====================
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
-let g:conceallevel = 0
+"let g:conceallevel = 0
 
 " ========= vim-better-whitespace ==================
 
