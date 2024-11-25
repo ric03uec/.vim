@@ -34,5 +34,7 @@
   "python.linting.enabled": false,
   "python.linting.pylintEnabled": false,
   "python.linting.pylintArgs": "--rc-file=.pylintrc",
-  "python.jediEnabled": true
+  "python.jediEnabled": true,
+  "typescript.showUnused": true,
+  "typescript.showDeprecated": true
 }

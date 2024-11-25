@@ -3,6 +3,7 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 set nocompatible              " be iMproved, required
+set nofoldenable              " disable folding
 filetype off                  " required
 
 filetype plugin indent on    " required
@@ -402,7 +403,10 @@ let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 
 let g:ctrlp_buftag_types = {'go' : '--language-force=go --golang-types=ftv'}
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/vendor,*/ve/*,*/venv/*
-let g:ctrlp_custom_ignore = {"dir": "\.git$\|\.hg$\|\ve$\|\venv$\|\VENV$\|\.svn$\|\.yardoc\|\.dist$\|public\/images\|public\/system\|data\|log\|tmp$", "file": "\.exe$\|\.so$\|\.dat$\|\.swp\|static$"}
+let g:ctrlp_custom_ignore = {
+			\ 'dir': '\.git$\|\.hg$\|\ve$\|\venv$\|\VENV$\|\.svn$\|\.yardoc\|\.dist$\|public\/images\|public\/system\|pkg\/mod\|data\|log\|tmp$',
+			\ 'file': '\.exe$\|\.so$\|\.dat$\|\.swp\|\$pkg\$\|static$'
+			\ }
 
 func! MyCtrlPTag()
   let g:ctrlp_prompt_mappings = {
