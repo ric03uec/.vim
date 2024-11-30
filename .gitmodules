@@ -4,9 +4,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
     url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-    url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
     url = https://github.com/tpope/vim-fugitive.git
@@ -137,3 +134,6 @@
 [submodule "bundle/vim-haproxy"]
 	path = bundle/vim-haproxy
 	url = https://github.com/Joorem/vim-haproxy
+[submodule "bundle/NeoSolarized.nvim"]
+	path = bundle/NeoSolarized.nvim
+	url = https://github.com/Tsuzat/NeoSolarized.nvim
