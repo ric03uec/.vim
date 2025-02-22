@@ -178,8 +178,10 @@ let g:solarized_termtrans=1
 " let g:rehash256 = 1
 set t_co=256
 " set background=dark
-" colorscheme NeoSolarized
-colorscheme solarized-osaka
+" colorscheme solarized
+"
+colorscheme NeoSolarized
+" colorscheme solarized-osaka
 set guifont=Inconsolata:h15
 set guioptions-=L
 
