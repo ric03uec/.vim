@@ -8,6 +8,9 @@ filetype off                  " required
 
 filetype plugin indent on    " required
 
+set runtimepath+=~/.config/nvim/bundle/CopilotChat.nvim
+lua require("CopilotChat").setup()
+
 "
 " Settings
 "
@@ -368,7 +371,8 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 " Wildmenu completion {{{
 set wildmenu
 " set wildmode=list:longest
-set wildmode=list:full
+" set wildmode=list:full
+set wildmode=longest:full,full
 
 set wildignore+=.hg,.git,.svn                    " Version control
 set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
@@ -615,6 +619,10 @@ let did_load_csvfiletype=1
 augroup filetypedetect
   au! BufRead,BufNewFile *.csv,*.dat	setfiletype csv
 augroup END
+" =================== copilot chat settings ==============
+nnoremap <leader>ac :CopilotChat<CR>
+nnoremap <leader>ax :CopilotChat explain<CR>
+vnoremap <leader>ax :CopilotChat explain<CR>
 
 " =================== Ultisnips settings ==============
 "let g:UltiSnipsExpandTrigger = "<tab>"
@@ -647,4 +655,3 @@ let g:NERDTrimTrailingWhitespace = 1
 " VIM ORG-Mode
 packloadall
 silent! helptags ALL
-
