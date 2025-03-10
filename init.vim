@@ -267,7 +267,8 @@ map k gk
 map j gj
 
 " Just go out in insert mode
-imap jk <ESC>l
+" imap jk <ESC>l
+inoremap jk <ESC>l
 
 nnoremap <F6> :setlocal spell! spell?<CR>
 
@@ -619,10 +620,6 @@ let did_load_csvfiletype=1
 augroup filetypedetect
   au! BufRead,BufNewFile *.csv,*.dat	setfiletype csv
 augroup END
-" =================== copilot chat settings ==============
-nnoremap <leader>ac :CopilotChat<CR>
-nnoremap <leader>ax :CopilotChat explain<CR>
-vnoremap <leader>ax :CopilotChat explain<CR>
 
 " =================== Ultisnips settings ==============
 "let g:UltiSnipsExpandTrigger = "<tab>"
@@ -655,3 +652,35 @@ let g:NERDTrimTrailingWhitespace = 1
 " VIM ORG-Mode
 packloadall
 silent! helptags ALL
+
+" =================== copilot chat settings ==============
+nnoremap <leader>ac :CopilotChat<CR>
+nnoremap <leader>,ac :CopilotChat<CR>
+nnoremap <leader>ax :CopilotChat explain<CR>
+vnoremap <leader>ax :CopilotChat explain<CR>
+
+imap <silent><script><expr> <c-k> copilot#Accept("\<CR>")
+autocmd BufReadPost,BufEnter *.go-context setlocal noautoread
+
+" Custom mappings for CopilotChat
+lua << EOF
+require("CopilotChat").setup({
+  prompts = {
+    explain = {
+      prompt = "Explain the following code in simple terms:",
+      mapping = "<leader>ex",
+    },
+    optimize = {
+      prompt = "Optimize this code for performance and readability:",
+      mapping = "<leader>op",
+    },
+    docstring = {
+      prompt = "Generate a detailed Go docstring for the selected function:",
+      mapping = "<leader>ds",
+    },
+	Yarrr = {
+      system_prompt = 'You are fascinated by pirates, so please respond in pirate speak.',
+    }
+  }
+})
+EOF
