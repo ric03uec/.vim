@@ -260,12 +260,6 @@ nmap <leader>w :w!<cr>
 " Center the screen
 nnoremap <space> zz
 
-" Move up and down on splitted lines (on small width screens)
-map <Up> gk
-map <Down> gj
-map k gk
-map j gj
-
 " Just go out in insert mode
 " imap jk <ESC>l
 inoremap jk <ESC>l
