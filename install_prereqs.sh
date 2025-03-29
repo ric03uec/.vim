@@ -11,10 +11,16 @@ __install_nodejs() {
 
 }
 
+__install_snaps() {
+  echo "Installing universal ctags"
+  sudo snap install universal-ctags
+}
+
 main() {
   ## Install prerequisites for dependencies
   echo "Installing prerequisites"
   __install_nodejs
+  __install_snaps
 }
 
 main
