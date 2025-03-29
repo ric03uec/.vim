@@ -155,3 +155,6 @@
 [submodule "pack/copilotchat/start/plenary.nvim"]
 	path = pack/copilotchat/start/plenary.nvim
 	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/preservim/tagbar.git
